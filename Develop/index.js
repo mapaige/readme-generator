@@ -26,8 +26,18 @@ const questions = [
   },
   {
     type: "input",
+    message: "Credits",
+    name: "credits"
+  },
+  {
+    type: "input",
     message: "License",
     name: "license"
+  },
+  {
+    type: "input",
+    message: "Badges",
+    name: "badges"
   },
   {
     type :"input",

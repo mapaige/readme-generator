@@ -1,8 +1,8 @@
-# km
+# Read Me
 
 
   ## Description 
-  mk
+  generator
   
   ## Table of Contents (Optional)
   
@@ -15,16 +15,16 @@
   
   
   ## Installation
-  km
+  n/a
   
   
   ## Usage 
-  km
+  n/a
   
   
   
   ## Credits
-  undefined
+  
   
   
   
@@ -34,17 +34,17 @@
   
   
   ## Badges
-  undefined
+  n/a
   
   
   
   
   ## Contributing
-  kksj
+  n/a
   
   
   ## Tests
-  kdd
+  n/a
   
   
   

@@ -1,24 +1,8 @@
+var inquirer = require("inquirer");
+var generateMarkdown = require("./utils/generateMarkdown")
+var fs = require("fs")
 // array of questions for user
 const questions = [
-
-];
-
-// function to write README file
-function writeToFile(fileName, data) {
-}
-
-// function to initialize program
-function init() {
-
-}
-
-// function call to initialize program
-init();
-
-
-var inquirer = require("inquirer");
-inquirer
-.prompt([
   {
     type: "input",
     message: "Title of the project:",
@@ -27,36 +11,64 @@ inquirer
   {
    type:"input",
    message: "Description",
-   title: "description"
+   name: "description"
   },
-  {
-    type: "input",
-    message: "Table of Contents",
-    title: "TOC"
-  },
+  
   {
     type: "input",
     message: "Installation",
-    title: "install"
+    name: "installation"
   },
   {
     type: "input",
     message: "Usage",
-    title:"usage"
+    name: "usage"
   },
   {
     type: "input",
     message: "License",
-    title: "license"
+    name: "license"
   },
   {
     type :"input",
     message: "Contributing",
-    title :"contributors"
+    name :"contributing"
   },
   {
     type: "input",
-    message: "Questions",
-    title : "questions"
+    message: "Tests",
+    name : "tests"
   }
-])
+]
+
+// function to write README file
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName,data,function(err){
+    if(err) throw err
+    console.log("Success!")
+  })
+}
+
+// function to initialize program
+function init() {
+
+  inquirer
+  .prompt(questions).then(function(userInput){
+        var data= {}
+        data.title = userInput.title
+        data.description =userInput.description
+        data.installation = userInput.installation
+        data.usage = userInput.usage
+        data.credits = userInput.credits
+        data.badges = userInput.badges
+        data.contributing = userInput.contributing
+        data.tests =userInput.tests
+        const readMeText = generateMarkdown(data)
+        writeToFile("./README.md",readMeText)
+  })
+}
+
+// function call to initialize program
+init();
+
+

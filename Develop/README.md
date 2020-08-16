@@ -1,10 +1,8 @@
-// function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
+# km
 
 
   ## Description 
-  ${data.description}
+  mk
   
   ## Table of Contents (Optional)
   
@@ -17,36 +15,36 @@ function generateMarkdown(data) {
   
   
   ## Installation
-  ${data.installation}
+  km
   
   
   ## Usage 
-  ${data.usage}
+  km
   
   
   
   ## Credits
-  ${data.credits}
+  undefined
   
   
   
   
   ## License
-  ${data.license}
+  undefined
   
   
   ## Badges
-  ${data.badges}
+  undefined
   
   
   
   
   ## Contributing
-  ${data.contributing}
+  kksj
   
   
   ## Tests
-  ${data.tests}
+  kdd
   
   
   
@@ -54,7 +52,3 @@ function generateMarkdown(data) {
   © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
   
   
-`;
-}
-
-module.exports = generateMarkdown;
